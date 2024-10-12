@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+/*
+
+Formatting classes
+
+*/
+
+body, html {
+    margin: 0;
+    padding: 0;
+}
+
+.app-wrapper {
+    width: 100vw;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #800000, #333333);
+}
+
+.about-wrapper {
+    width: 40%;
+    min-height: 100%;
+}
+
+.experience-wrapper {
+    width: 60%;
+    min-height: 100%;
+}
+
+.cards-wrapper {
+    width: 100%;
+    min-height: 80%;
+    overflow-y: auto;
+}
+
+.carousel-wrapper {
+    width: 100%;
+    height: 448px;
+}
+
+.image-wrapper {
+    height: 400px;
+    width: 400px;
+    text-align: center;
+    border: 4px solid #ffffff;
+    border-radius: 6px;
+}
+
+.filter-bar-wrapper {
+    min-height: 10%;
+    width: 100%;
+}
+
+.ex-card-wrapper {
+    width: 420px;
+    min-height: 64px;
+    max-height: 256px;
+}
+
+.ex-card-title {
+    width: 100%;
+    height: 20%;
+}
+
+.ex-card-body {
+    width: 100%;
+    height: 80%;
+}
+
+.ed-card-wrapper {
+    width: 420px;
+    min-height: 48px;
+    max-height: 96px;
+}
+
+.pj-card-wrapper {
+    width: 420px;
+    min-height: 96px;
+    max-height: 256px;
+}
+
+/*
+
+Utilities Classes
+
+*/
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-center-x {
+    display: flex;
+    justify-content: center;
+}
+
+.flex-around-center {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.f-dir-r {
+    flex-direction: row;
+}
+
+.f-dir-c {
+    flex-direction: column;
+}
+
+.font-white {
+    color: #ffffff !important;
+}
+
+.font-style {
+    font-family: 'montserrat', sans-serif;
+    text-align: center;
+}
+
+.fs-16 {
+    font-size: 16px;
+}
+
+.fs-24 {
+    font-size: 24px;
+}
+
+.fs-32 {
+    font-size: 32px;
+}
+
+.fs-64 {
+    font-size: 64px;
+}
+
+.fw-bold {
+    font-weight: 600;
+}
+
+.m-8 {
+    margin-top: 8px;
+    margin-bottom: 8px;
+    margin-left: 8px;
+    margin-right: 8px;
+}
+
+.card-bg {
+    background: linear-gradient(to bottom, #d3d3d3, #ffffff);
+}
+
+.card-border {
+    border: 4px solid #000000;
+    border-radius: 6px;
+}
