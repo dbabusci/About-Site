@@ -13,10 +13,56 @@ import { EducationCard, ProjectCard, ExperienceCard } from './components/CardCom
 import Carousel from './components/Carousel';
 import FilterBar from './components/FilterBar';
 
+//data
+import d from './data/items.json';
+
 //style
 import './style/utils.css';
 
 function App() {
+	const [data, setData] = useState(d);
+	function Items() {
+		return (
+			<div className='cards-wrapper flex-around-center f-dir-c'>
+				{
+					Object.keys(data).map(el => {
+						if (data[el].cat == "Experience") {
+							return (
+								<div>
+									<ExperienceCard
+										title={data[el].title}
+										dateRange={data[el].dateRange}
+										description={data[el].description}
+										hardSkills={data[el].skills}
+									/>
+								</div>
+							);
+						} else if (data[el].cat == "Education") {
+							return (
+								<div>
+									<EducationCard
+										title={data[el].title}
+										dateRange={data[el].dateRange}
+									/>
+								</div>
+							)
+						} else {
+							return (
+								<div>
+									<ProjectCard
+										title={data[el].title}
+										description={data[el].description}
+										hardSkills={data[el].skills}
+										githubLink={data[el].link}
+									/>
+								</div>
+							)
+						}
+					})
+				}
+			</div>
+		);
+	}
 	return (
 		<div className='app-wrapper flex-center-x'>
 			<AboutWrapper>
@@ -24,36 +70,19 @@ function App() {
 				<Carousel />
 				<div className='flex-center-x'>
 					<IconButton href='https://github.com/dbabusci' target="_blank" rel="noopener noreferrer">
-						<GitHubIcon className='font-white'/>
+						<GitHubIcon className='font-white' />
 					</IconButton>
 					<IconButton href='https://www.linkedin.com/in/dbabusci/' target="_blank" rel="noopener noreferrer">
-						<LinkedInIcon className='font-white'/>
+						<LinkedInIcon className='font-white' />
 					</IconButton>
 					<IconButton href='https://www.google.com' target="_blank" rel="noopener noreferrer">
-						<EmailIcon className='font-white'/>
+						<EmailIcon className='font-white' />
 					</IconButton>
 				</div>
 			</AboutWrapper>
 			<ExperienceWrapper>
 				<FilterBar/>
-				<CardWrapper>
-					<EducationCard
-						title='Kent State University'
-						dateRange='2024-2024'
-					/>
-					<ProjectCard
-						title='HareSVN'
-						description='A hackathon project'
-						hardSkills='Rust, Javascript, Tauri, Vue'
-						githubLink='balls'
-					/>
-					<ExperienceCard
-						title='Software Engineer Intern'
-						dateRange='2024-2024'
-						description='Hello this is my description. I am writing and talking and waffling just to extend this a bit'
-						hardSkills='C#, Javascript, SQL, .Net, React, MongoDB'
-					/>
-				</CardWrapper>
+				<Items/>
 			</ExperienceWrapper>
 		</div>
 	)

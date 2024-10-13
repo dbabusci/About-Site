@@ -1,0 +1,82 @@
+{
+    "1": {
+        "title": "Software Engineer Intern",
+        "cat": "Experience",
+        "dateRange": "05-2024-Present",
+        "description": "In this role I helped develop a fullstack webapp made with react + asp.net. During this role I completed JIRA tickets for new features and bug fixes.",
+        "skills": "C#, Javascript, HTML, CSS, SQL, ASP.Net, React, MongoDB",
+        "link": "N/A"
+    },
+    "2": {
+        "title": "Summer Undergraduate Researcher",
+        "cat": "Experience",
+        "dateRange": "06-2023-08-2023",
+        "description": "In this role I developed a desktop application using Tauri and React that would allow healthcare professionals to access users GERD symptoms.",
+        "skills": "Typescript, SQL, HTML, CSS, TailwindCSS, React, MySQL",
+        "link": "N/A" 
+    },
+    "3": {
+        "title": "Student Technician",
+        "cat": "Experience",
+        "dateRange": "09-2022-05-2024",
+        "description": "In this role I helped Kent State employees set up new devices, troubleshoot technical issues, and set up workstations in this IT helpdesk position.",
+        "skills": "N/A",
+        "link": "N/A"
+    }, 
+    "4": {
+        "title": "HareSVN",
+        "cat": "HackathonProject",
+        "dateRange": "N/A",
+        "description": "Developed a desktop application with VUE and Tauri that would allow for a GUI interface for SVN commands.",
+        "skills": "Typescript, Rust, HTML, CSS, Vue, Tauri",
+        "link": "https://github.com/HareSVN/Hare-SVN"
+    },
+    "5": {
+        "title": "Personal Website",
+        "cat": "PersonalProject",
+        "dateRange": "N/A",
+        "description": "The website you are currently on!",
+        "skills": "Javascript, HTML, CSS, React",
+        "link": "N/A"
+    },
+    "6": {
+        "title": "Domath",
+        "cat": "PersonalProject",
+        "dateRange": "N/A",
+        "description": "A terminal command for doing simple mathematical experessions. Built with rust.",
+        "skills": "Rust",
+        "link": "https://github.com/dbabusci/Domath"
+    }, 
+    "7": {
+        "title": "DLD",
+        "cat": "PersonalProject",
+        "dateRange": "N/A",
+        "description": "A simple terminal command which allows users to install the most recently downloaded debian package. Developed with C++ and the STL library.",
+        "skills": "C++",
+        "link": "https://github.com/dbabusci/DLD"
+    },
+    "8": {
+        "title": "Greg^3",
+        "cat": "SchoolProject",
+        "dateRange": "N/A",
+        "description": "A school project for Kent State's software engineering course. Figit cube game where you solve a different puzzle on every cube face.",
+        "skills": "Javascript, P5js",
+        "link": "N/A"
+    },
+    "9": {
+        "title": "Password Manager",
+        "cat": "SchoolProject",
+        "dateRange": "N/A",
+        "description": "A school project for Kent State's information security course. Allowed users to update and create new password entries which would be encrypted and stored in a mongoDB database.",
+        "skills": "Javascript, C#, HTML, CSS, React, ASP.Net, MongoDB",
+        "link": "N/A"
+    },
+    "10": {
+        "title": "Kent State University",
+        "cat": "Education",
+        "dateRange": "08-2021-05-2025",
+        "description": "N/A",
+        "skills": "N/A",
+        "link": "N/A"
+    }
+}
