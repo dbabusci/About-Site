@@ -41,7 +41,12 @@ function App() {
 						title='Kent State University'
 						dateRange='2024-2024'
 					/>
-					<ProjectCard/>
+					<ProjectCard
+						title='HareSVN'
+						description='A hackathon project'
+						hardSkills='Rust, Javascript, Tauri, Vue'
+						githubLink='balls'
+					/>
 					<ExperienceCard
 						title='Software Engineer Intern'
 						dateRange='2024-2024'

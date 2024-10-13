@@ -101,6 +101,12 @@ Utilities Classes
     align-items: center;
 }
 
+.flex-end-center {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
 .f-dir-r {
     flex-direction: row;
 }

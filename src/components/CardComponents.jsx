@@ -1,3 +1,7 @@
+//external components
+import { IconButton } from '@mui/material';
+import GitHubIcon from '@mui/icons-material/GitHub';
+
 //style
 import '../style/utils.css';
 
@@ -24,12 +28,15 @@ export function ExperienceCard({ title, dateRange, description, hardSkills }) {
 }
 
 export function ProjectCard({ title, description, hardSkills, githubLink }) {
+    const github = <IconButton href='https://www.google.com' target="_blank" rel="noopener noreferrer"><GitHubIcon/></IconButton>; 
     return (
         <div className='pj-card-wrapper card-bg card-border m-8'>
-            <div>{title}</div>
-            <div>{description}</div>
-            <div>{hardSkills}</div>
-            <div>{githubLink ? <></> : <div>hello</div>}</div>
+            <div className='font-style fs-24 fw-bold'>{title}</div>
+            <div className='font-style m-8'>{description}</div>
+            <div className='flex-around-center'>
+                <div className='font-style m-8'>{hardSkills}</div>
+                <div>{githubLink != 'N/A' ? github : null}</div>
+            </div>
         </div>
     );
 }
