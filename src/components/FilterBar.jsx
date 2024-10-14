@@ -1,5 +1,6 @@
 //react
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
+import { SelectedItems } from "../App";
 
 //external components
 import { Button } from "@mui/material";
@@ -8,23 +9,23 @@ import { Button } from "@mui/material";
 import '../style/utils.css';
 
 function FilterBar() {
-    const [currentSelected, setCurrentSelected] = useState([]);
+    const tagsContext = useContext(SelectedItems);
+    if(!tagsContext) {
+        throw new Error("Context did not pass");
+    }
+    const { selectedItems, setSelectedItems } = tagsContext;
 
     function handleSelect(cat) {
-        setCurrentSelected(prev => [...prev, cat]);
+        setSelectedItems(prev => [...prev, cat]);
     }
 
     function handleDeselect(cat) {
-        setCurrentSelected(prev => prev.filter((item) => item != cat));
+        setSelectedItems(prev => prev.filter((item) => item != cat));
     }
 
     function handler(cat) {
-        currentSelected.includes(cat) ? handleDeselect(cat) : handleSelect(cat);
+        selectedItems.includes(cat) ? handleDeselect(cat) : handleSelect(cat);
     } 
-
-    useEffect(() => {
-        console.log(currentSelected);
-    });
 
     return(
         <div className='filter-bar-wrapper flex-center'>
@@ -52,14 +53,14 @@ function FilterBar() {
             <Button 
                 variant='contained' 
                 style={{marginLeft: '8px', marginRight: '8px', backgroundColor: '#ffffff', color: '#000000' }} 
-                onClick={() => handler('SchoolProjects')}
+                onClick={() => handler('SchoolProject')}
             >
                 School Projects
             </Button>
             <Button 
                 variant='contained' 
                 style={{marginLeft: '8px', marginRight: '8px', backgroundColor: '#ffffff', color: '#000000' }} 
-                onClick={() => handler('HackathonProjects')}
+                onClick={() => handler('HackathonProject')}
             >
                 Hackathon Projects
             </Button>
