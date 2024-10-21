@@ -25,7 +25,7 @@ function FilterBar() {
 
     function handler(cat) {
         selectedItems.includes(cat) ? handleDeselect(cat) : handleSelect(cat);
-    } 
+    }
 
     return(
         <div className='filter-bar-wrapper flex-center'>

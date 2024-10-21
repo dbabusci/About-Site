@@ -40,3 +40,11 @@ export function ProjectCard({ title, description, hardSkills, githubLink }) {
         </div>
     );
 }
+
+export function ItemCard({ item }) {
+    return(
+        <div className='card-bg card-border font-style m-8' style={{ textAlign: 'center' }}>
+            <div className='m-8'>{item}</div>
+        </div>
+    );
+}

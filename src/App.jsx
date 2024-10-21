@@ -9,9 +9,10 @@ import EmailIcon from '@mui/icons-material/Email';
 
 //internal components
 import { ExperienceWrapper, CardWrapper, AboutWrapper } from './components/Wrappers';
-import { EducationCard, ProjectCard, ExperienceCard } from './components/CardComponents';
+import { EducationCard, ProjectCard, ExperienceCard} from './components/CardComponents';
 import Carousel from './components/Carousel';
 import FilterBar from './components/FilterBar';
+import FilterItems from './components/FilterItems';
 
 //data
 import d from './data/items.json';
@@ -103,6 +104,7 @@ function App() {
 				</AboutWrapper>
 				<ExperienceWrapper>
 					<FilterBar />
+					<FilterItems/>
 					<Items data={itemData} />
 				</ExperienceWrapper>
 			</div>
