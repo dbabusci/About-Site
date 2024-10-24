@@ -9,7 +9,7 @@ import { ArrowForward, ArrowBack } from '@mui/icons-material';
 import '../style/utils.css';
 
 function Carousel() {
-    const [imageList, setImageList] = useState(['../assets/li.jpeg']);
+    const [imageList, setImageList] = useState(['/li.jpeg', 'dac.jpeg']);
     const [current, setCurrent] = useState(0);
 
     function nextImage() {
@@ -26,7 +26,7 @@ function Carousel() {
                 <ArrowBack className='font-white' style={{ width: '32px', height: '32px' }}/>
             </IconButton>
             <img
-                src='li.jpeg'
+                src={imageList[current]}
                 alt='No image found'
                 className='image-wrapper font-white font-style'
             />

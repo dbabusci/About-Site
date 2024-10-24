@@ -12,18 +12,20 @@ body, html {
 
 .app-wrapper {
     width: 100vw;
-    min-height: 100vh;
+    height: 100vh;
     background: linear-gradient(135deg, #800000, #333333);
+    display: flex;
+    justify-content: center;
 }
 
 .about-wrapper {
     width: 40%;
-    min-height: 100%;
+    height: 100%;
 }
 
 .experience-wrapper {
     width: 60%;
-    min-height: 100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -54,7 +56,7 @@ body, html {
 }
 
 .ex-card-wrapper {
-    width: 420px;
+    width: 400px;
     min-height: 64px;
     max-height: 256px;
 }
@@ -70,13 +72,13 @@ body, html {
 }
 
 .ed-card-wrapper {
-    width: 420px;
+    width: 400px;
     min-height: 48px;
     max-height: 96px;
 }
 
 .pj-card-wrapper {
-    width: 420px;
+    width: 400px;
     min-height: 96px;
     max-height: 256px;
 }
@@ -161,4 +163,65 @@ Utilities Classes
 .card-border {
     border: 4px solid #000000;
     border-radius: 6px;
+}
+
+/*Mobile formatting*/
+
+@media (max-width: 540px) {
+    .app-wrapper {
+        flex-direction: column;
+    }
+
+    .about-wrapper {
+        width: 100%;
+        height: 100vh;
+    }
+
+    .experience-wrapper {
+        width: 100%;
+        height: 100vh;
+        overflow-y: scroll;
+    }
+
+    .image-wrapper {
+        width: 320px;
+        height: 320px;
+    }
+
+    .carousel-wrapper {
+        height: 360px;
+    }
+
+    .fs-16 {
+        font-size: 8px;
+    }
+    
+    .fs-24 {
+        font-size: 12px;
+    }
+    
+    .fs-32 {
+        font-size: 16px;
+    }
+    
+    .fs-64 {
+        font-size: 32px;
+    }
+
+    .flex-center {
+        flex-wrap: wrap;
+    }
+    
+    .flex-center-x {
+        flex-wrap: wrap;
+    }
+    
+    .flex-around-center {
+        flex-wrap: wrap;
+    }
+    
+    .flex-end-center {
+        flex-wrap: wrap;
+    }
+
 }

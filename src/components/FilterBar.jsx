@@ -31,35 +31,35 @@ function FilterBar() {
         <div className='filter-bar-wrapper flex-center'>
             <Button 
                 variant='contained' 
-                style={{marginLeft: '8px', marginRight: '8px', backgroundColor: '#ffffff', color: '#000000' }} 
+                style={{marginLeft: '8px', marginRight: '8px', marginTop: '8px', marginBottom: '8px', backgroundColor: '#ffffff', color: '#000000' }} 
                 onClick={() => handler('Experience')}
             >
                 Experience
             </Button>
             <Button 
                 variant='contained' 
-                style={{marginLeft: '8px', marginRight: '8px', backgroundColor: '#ffffff', color: '#000000' }} 
+                style={{marginLeft: '8px', marginRight: '8px', marginTop: '8px', marginBottom: '8px', backgroundColor: '#ffffff', color: '#000000' }} 
                 onClick={() => handler('Education')}
             >
                 Education
             </Button>
             <Button 
                 variant='contained' 
-                style={{marginLeft: '8px', marginRight: '8px', backgroundColor: '#ffffff', color: '#000000' }} 
+                style={{marginLeft: '8px', marginRight: '8px', marginTop: '8px', marginBottom: '8px', backgroundColor: '#ffffff', color: '#000000' }} 
                 onClick={() => handler('PersonalProject')}
             >
                 Personal Projects
             </Button>
             <Button 
                 variant='contained' 
-                style={{marginLeft: '8px', marginRight: '8px', backgroundColor: '#ffffff', color: '#000000' }} 
+                style={{marginLeft: '8px', marginRight: '8px', marginTop: '8px', marginBottom: '8px', backgroundColor: '#ffffff', color: '#000000' }} 
                 onClick={() => handler('SchoolProject')}
             >
                 School Projects
             </Button>
             <Button 
                 variant='contained' 
-                style={{marginLeft: '8px', marginRight: '8px', backgroundColor: '#ffffff', color: '#000000' }} 
+                style={{marginLeft: '8px', marginRight: '8px', marginTop: '8px', marginBottom: '8px', backgroundColor: '#ffffff', color: '#000000' }} 
                 onClick={() => handler('HackathonProject')}
             >
                 Hackathon Projects

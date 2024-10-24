@@ -25,6 +25,7 @@ export let SelectedItems = createContext();
 function App() {
 	const [itemData, setItemData] = useState(d);
 	const [selectedItems, setSelectedItems] = useState([]);
+	const [viewportWidth, setViewportWidth] = useState(0);
 
 	useEffect(() => {
 		console.log(selectedItems);
@@ -40,6 +41,26 @@ function App() {
 			setItemData(ret);
 		}
 	}, [selectedItems]);
+
+	useEffect(() => {
+		const handleResize = () => {
+		  	setViewportWidth(window.innerWidth);
+		};
+		handleResize();
+		window.addEventListener('resize', handleResize);
+		return () => {
+		  	window.removeEventListener('resize', handleResize);
+		};
+	}, []);
+
+	//hacky solution
+	//We have the problem of the experience tab selection and label fields being overwritten
+	//Ergo we determine if the device is mobile and remove them
+	//Honestly I doubt people will care about filtering since it is like 10 items
+	//Doubt anyone will care in general haha
+	function isMobile() {
+		return viewportWidth < 540;
+	}
 
 	function Items({ data }) {
 		let i = 0;
@@ -84,9 +105,10 @@ function App() {
 			</div>
 		);
 	}
+
 	return (
 		<SelectedItems.Provider value={{ selectedItems, setSelectedItems }}>
-			<div className='app-wrapper flex-center-x'>
+			<div className='app-wrapper'>
 				<AboutWrapper>
 					<div className='flex-center-x font-white font-style fs-64 fw-bold'>Dominic Babusci</div>
 					<Carousel />
@@ -103,8 +125,8 @@ function App() {
 					</div>
 				</AboutWrapper>
 				<ExperienceWrapper>
-					<FilterBar />
-					<FilterItems/>
+					{isMobile() ? null : <FilterBar/>}
+					{isMobile() ? null : <FilterItems/>}
 					<Items data={itemData} />
 				</ExperienceWrapper>
 			</div>
